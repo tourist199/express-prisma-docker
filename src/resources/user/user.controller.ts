@@ -24,7 +24,7 @@ class UserController implements Controller {
   private register = async (req: Request, res: Response, next: NextFunction): Promise<Response | void> => {
     try {
       const { name, email, password, posts, avatar } = req.body;
-      console.log({ name, email, password, posts, avatar });
+
       const token = await this.UserService.register({
         name,
         email,
